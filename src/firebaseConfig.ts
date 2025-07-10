@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc, getDoc, query, orderBy, limit } from 'firebase/firestore';
+import { getAnalytics, logEvent } from 'firebase/analytics';
 import type { Genre, Artist, Song } from './types/music';
 
 const firebaseConfig = {
@@ -16,6 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const analytics = getAnalytics(app);
 
 // --- Genres ---
 export const genresCollection = collection(db, 'genres');

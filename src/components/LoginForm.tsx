@@ -5,6 +5,8 @@ import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import '../styles/LoginForm.css';
 import { useNavigate } from 'react-router-dom';
+import { analytics } from '../firebaseConfig';
+import { logEvent } from 'firebase/analytics';
 
 interface Props {
   onChangeView: (view: 'login' | 'signup' | 'forgot') => void;
@@ -58,6 +60,10 @@ export default function LoginForm({ onChangeView }: Props) {
     setLoading(true);
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      if (typeof window !== 'undefined' && analytics) {
+        logEvent(analytics, 'login', { method: 'email' });
+        console.log('[Analytics] Evento enviado: login', { method: 'email' });
+      }
       navigate('/home');
     } catch (err: unknown) {
       if (err && typeof err === 'object' && 'code' in err) {

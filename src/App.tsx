@@ -5,8 +5,17 @@ import ProfilePage from './components/ProfilePage';
 import GenrePage from './components/GenrePage';
 import ArtistPage from './components/ArtistPage';
 import AdminPanel from './components/AdminPanel';
+import { useEffect } from 'react';
+import { analytics } from './firebaseConfig';
+import { logEvent } from 'firebase/analytics';
 
 export default function App() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && analytics) {
+      logEvent(analytics, 'test_event', { foo: 'bar' });
+      console.log('[Analytics] Evento enviado: test_event', { foo: 'bar' });
+    }
+  }, []);
   return (
     <BrowserRouter>
       <Routes>
