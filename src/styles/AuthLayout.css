@@ -1,0 +1,217 @@
+.auth-root {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Kodchasan', sans-serif;
+  background: #E6E5E5;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-left, .auth-right {
+  width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #E6E5E5;
+}
+
+.auth-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 0 0 0 0 !important;
+  box-shadow: none !important;
+  background: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-root.reverse .auth-left {
+  order: 2;
+}
+.auth-root.reverse .auth-right {
+  order: 1;
+}
+.auth-root.reverse .auth-img {
+  border-radius: 24px 0 0 24px;
+  box-shadow: -2px 0 16px #0001;
+}
+
+/* Animación de swap de lado */
+.swap-side-enter {
+  opacity: 0;
+  transform: translateX(60px);
+}
+.swap-side-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+}
+.swap-side-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.swap-side-exit-active {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Transiciones de imágenes */
+.fade-img-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-img-enter-active {
+  opacity: 1;
+  transition: opacity 0.7s;
+  z-index: 2;
+}
+.fade-img-exit {
+  opacity: 1;
+  z-index: 2;
+}
+.fade-img-exit-active {
+  opacity: 0;
+  transition: opacity 0.7s;
+  z-index: 1;
+}
+
+/* Transiciones de formularios */
+.slide-form-enter {
+  opacity: 0;
+  transform: translateX(40px);
+}
+.slide-form-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+}
+.slide-form-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-form-exit-active {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.slide-form.left-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+}
+.slide-form.left-out {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+}
+.slide-form.right-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+}
+.slide-form.right-out {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+}
+
+.auth-left, .auth-right {
+  position: relative;
+}
+
+.auth-root.slide-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Kodchasan', sans-serif;
+  background: #E6E5E5;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-left, .auth-right {
+  width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #E6E5E5;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.auth-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 0 24px 24px 0;
+  box-shadow: 2px 0 16px #0001;
+  background: #E6E5E5;
+  transition: all 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Movimiento suave de los lados */
+.auth-root.slide-layout .auth-left,
+.auth-root.slide-layout .auth-right {
+  transform: translateX(0);
+}
+.auth-root.slide-layout .auth-left.moving-left {
+  transform: translateX(-60px);
+}
+.auth-root.slide-layout .auth-right.moving-right {
+  transform: translateX(60px);
+}
+.auth-root.slide-layout .auth-left.moving-right {
+  transform: translateX(60px);
+}
+.auth-root.slide-layout .auth-right.moving-left {
+  transform: translateX(-60px);
+}
+
+.form-animate {
+  animation: fadeForm 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeForm {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .auth-root, .slide-layout {
+    flex-direction: column;
+  }
+  .auth-left, .auth-right {
+    width: 100vw;
+    min-height: 40vh;
+  }
+  .auth-img {
+    border-radius: 0 0 24px 24px;
+    height: 40vh;
+  }
+  .slide-layout.signup-mode .auth-left,
+  .slide-layout.signup-mode .auth-right {
+    transform: none;
+  }
+} 

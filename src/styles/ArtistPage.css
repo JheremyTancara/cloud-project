@@ -1,0 +1,179 @@
+.jalafy-artist-root {
+  color: #fff;
+  background: #181818;
+  min-height: 100vh;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jalafy-artist-card {
+  width: 96vw;
+  max-width: 1600px;
+  height: 224px;
+  background: #232323;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #000a;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 2rem 0;
+}
+.jalafy-artist-header {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 2rem 0 1rem 0;
+  width: 100%;
+}
+.jalafy-artist-img-large {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 32px #000a;
+  margin-left: 2rem;
+}
+.jalafy-artist-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: -18px;
+}
+.jalafy-title {
+  margin-top: 0.8rem;
+}
+.jalafy-artist-stats {
+  color: #1db954;
+  font-size: 1rem;
+}
+.jalafy-play-btn {
+  background: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+.jalafy-play-btn:hover {
+  background: #1ed760;
+}
+.jalafy-divider {
+  width: 100%;
+  height: 1.5px;
+  background: #2e2e2e;
+  margin: 0 0 0.5rem 0;
+}
+.jalafy-search-bar {
+  margin: 1rem 0 0 0;
+  width: 98%;
+  max-width: none;
+}
+.jalafy-search-bar input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  background: #222;
+  color: #fff;
+}
+.jalafy-songs-table {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  max-width: none;
+}
+.jalafy-songs-table-header,
+.jalafy-songs-table-row {
+  display: grid;
+  grid-template-columns: 30px 100px 1.7fr 0.9fr 0.9fr 200px;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+}
+.jalafy-songs-table-header {
+  color: #aaa;
+  font-weight: bold;
+  background: #232323;
+  border-radius: 20px;
+}
+.jalafy-songs-table-row {
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 6px;
+}
+.jalafy-songs-table-row:hover {
+  background: #232323;
+}
+.jalafy-song-img-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #0006;
+}
+.jalafy-song-img-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #333;
+}
+.jalafy-player-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: #181818;
+  border-top: 1px solid #222;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  z-index: 100;
+}
+.jalafy-player-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.jalafy-player-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.jalafy-player-audio {
+  width: 350px;
+}
+.jalafy-alert {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px #000a;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.jalafy-alert button {
+  background: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+} 

@@ -1,0 +1,21 @@
+{
+  "indexes": [
+    {
+      "collectionId": "posts",
+      "fields": [
+        { "fieldPath": "createdAt", "order": "DESCENDING" },
+        { "fieldPath": "userId", "order": "ASCENDING" }
+      ],
+      "queryScope": "COLLECTION"
+    },
+    {
+      "collectionId": "comments",
+      "fields": [
+        { "fieldPath": "postId", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "ASCENDING" }
+      ],
+      "queryScope": "COLLECTION"
+    }
+  ],
+  "fieldOverrides": []
+}

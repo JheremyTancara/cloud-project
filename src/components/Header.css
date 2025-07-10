@@ -1,0 +1,154 @@
+/* Header principal */
+.jalafy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  height: 72px;
+  background: #181818;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.jalafy-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1DB954;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.jalafy-header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.jalafy-toptracks-btn {
+  background: #1DB954;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.jalafy-toptracks-btn:hover {
+  background: #1ed760;
+}
+
+.jalafy-user-menu-wrapper {
+  position: relative;
+}
+
+.jalafy-user-btn {
+  background: #222;
+  border: 2px solid #1DB954;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.jalafy-user-btn:hover {
+  border: 2px solid #1ed760;
+}
+
+.jalafy-user-icon {
+  font-size: 1.7rem;
+  color: #1DB954;
+}
+
+.jalafy-user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 54px;
+  min-width: 170px;
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  padding: 10px 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.jalafy-dropdown-item {
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.jalafy-dropdown-item:hover {
+  background: #1DB954;
+  color: #181818;
+}
+
+/* Modal para top tracks */
+.jalafy-toptracks-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.jalafy-toptracks-content {
+  background: #181818;
+  color: #fff;
+  border-radius: 18px;
+  padding: 32px 28px 24px 28px;
+  min-width: 320px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-align: center;
+}
+.jalafy-toptracks-content h3 {
+  color: #1DB954;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+.jalafy-toptracks-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+}
+.jalafy-toptracks-content li {
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+.jalafy-artist {
+  color: #b3b3b3;
+  font-size: 0.98em;
+  margin-left: 6px;
+}
+.jalafy-loading {
+  color: #1DB954;
+  font-size: 1.1rem;
+  margin: 18px 0;
+}
+.jalafy-close-btn {
+  background: #1DB954;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.jalafy-close-btn:hover {
+  background: #1ed760;
+} 
